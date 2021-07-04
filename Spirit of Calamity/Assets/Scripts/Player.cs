@@ -22,6 +22,11 @@ public class Player : MonoBehaviour
     public float health;
     public float runSpeed = 5f;
 
+    [Header("Player Damage")]
+
+    [Header("Coroutines")]
+    public float basicDelay = 0.4f;
+
     [Header("Debug")]
     public bool debugModeEnabler = false;
 
@@ -44,10 +49,11 @@ public class Player : MonoBehaviour
             && currentState != PlayerState.transition && currentState != PlayerState.interact) // If Player is not attacking / staggered / transitioning
         {
             Run(); // Move the character every frame
-            //Attack(); // Attack on button press
+            BasicAttack(); // Attack on button press
         }
     }
 
+    // State Change
     private void ChangeState(PlayerState newState)
     {
         if (currentState != newState)
@@ -64,9 +70,10 @@ public class Player : MonoBehaviour
         }
     }
 
+    // Actions
     private void Run()
     {
-        changeInVelocity.Normalize();
+        changeInVelocity.Normalize(); // 
         changeInVelocity.x = Input.GetAxisRaw("Horizontal") * runSpeed; // (1, 0 or -1) * walkspeed * seconds from the last frame
         changeInVelocity.y = Input.GetAxisRaw("Vertical") * runSpeed; // (1, 0 or -1) * walkspeed * seconds from the last frame
         myRigidbody2D.velocity = changeInVelocity;
@@ -94,6 +101,27 @@ public class Player : MonoBehaviour
             myAnimator.SetBool("isRunning", false);
             ChangeState(PlayerState.idle); // change to idle if player is not walking
         }
+    }
+
+    private void BasicAttack()
+    {
+        if(Input.GetButtonDown("Basic Attack") && currentState != PlayerState.attack
+            && currentState != PlayerState.stagger)
+        {
+            StartCoroutine(BasicAttackCo());
+        }
+    }
+
+    // Coroutines
+    private IEnumerator BasicAttackCo() // Player AttackCo
+    {
+        ChangeState(PlayerState.attack);
+        myRigidbody2D.velocity = Vector2.zero;
+        myAnimator.SetBool("isAttacking", true);
+        yield return null;
+        myAnimator.SetBool("isAttacking", false);
+        yield return new WaitForSeconds(basicDelay);
+        ChangeState(PlayerState.idle);
     }
 
     private void DebugMode(int debugCode)
