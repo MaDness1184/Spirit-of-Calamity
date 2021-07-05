@@ -23,6 +23,7 @@ public class Player : MonoBehaviour
     public float runSpeed = 5f;
 
     [Header("Player Damage")]
+    public int basicAttackDamage = 2;
 
     [Header("Coroutines")]
     public float basicDelay = 0.4f;
@@ -71,6 +72,11 @@ public class Player : MonoBehaviour
     }
 
     // Actions
+    private void Idle()
+    {
+
+    }
+
     private void Run()
     {
         changeInVelocity.Normalize(); // 
