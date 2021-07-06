@@ -371,8 +371,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
-  health: 0
+  health: 5
   runSpeed: 3
+  basicAttackDamage: 2
+  basicDelay: 0.4
   debugModeEnabler: 0
 --- !u!50 &593449766
 Rigidbody2D:
