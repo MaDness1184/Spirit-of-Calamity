@@ -9,17 +9,19 @@ public enum PlayerState
     attack,
     interact,
     stagger,
-    transition
+    transition,
+    dead
 }
 
 public class Player : MonoBehaviour
 {
     [Header("Player State")]
     public PlayerState currentState;
-    //private bool invulnerable = false;
+    private bool invulnerable = false;
 
     [Header("Player Stats")]
-    public float health;
+    public FloatReference currentHealth;
+    private float health;
     public float runSpeed = 5f;
 
     [Header("Player Damage")]
@@ -54,7 +56,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    // State Change
+    // Change State
     private void ChangeState(PlayerState newState)
     {
         if (currentState != newState)
@@ -74,7 +76,7 @@ public class Player : MonoBehaviour
     // Actions
     private void Idle()
     {
-
+        // Random Idle Animation run through after a random duration
     }
 
     private void Run()
@@ -118,8 +120,37 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void Hurt(float knocktime, float recoverDelay, float damage) // Start KnockCo and take damage
+    {
+        if (invulnerable != true) // Take damage if Player is not invulnerable
+        {
+            TakeDamage(damage);
+            if (currentHealth.GetRuntimeValue() > 0f) // Run KnockCo if Player is alive
+            {
+                StartCoroutine(KnockCo(knocktime, recoverDelay));
+            }
+        }
+    }
+
+    private void TakeDamage(float damage) // Take dmg and update hp
+    {
+        invulnerable = true;
+        if (currentState != PlayerState.stagger && currentHealth.GetRuntimeValue() > 0f) // If Player is alive and not staggered
+        {
+            currentHealth.SubtractRuntimeValue(damage); // subtract the currentHealth from the scriptable object
+            //playerHealthSignal.Raise(); // Raise all listeners of playerHealthSignal
+            //cameraShakeSignal.Raise(); // Raise all listeners of playerShake
+        }
+        if (currentHealth.GetRuntimeValue() <= 0f) // kill off the Player once currentHealth reaches 0
+        {
+            ChangeState(PlayerState.dead);
+            this.gameObject.SetActive(false); // will be put into a coroutine later
+            DebugMode(1);
+        }
+    }
+
     // Coroutines
-    private IEnumerator BasicAttackCo() // Player AttackCo
+    private IEnumerator BasicAttackCo()
     {
         ChangeState(PlayerState.attack);
         myRigidbody2D.velocity = Vector2.zero;
@@ -128,6 +159,19 @@ public class Player : MonoBehaviour
         myAnimator.SetBool("isAttacking", false);
         yield return new WaitForSeconds(basicDelay);
         ChangeState(PlayerState.idle);
+    }
+
+    private IEnumerator KnockCo(float knocktime, float recoverDelay)
+    {
+        if (myRigidbody2D != null && currentState != PlayerState.stagger)
+        {
+            ChangeState(PlayerState.stagger);
+            yield return new WaitForSeconds(knocktime);
+            myRigidbody2D.velocity = Vector2.zero;
+            yield return new WaitForSeconds(recoverDelay);
+            invulnerable = false;
+            ChangeState(PlayerState.idle);
+        }
     }
 
     private void DebugMode(int debugCode)
