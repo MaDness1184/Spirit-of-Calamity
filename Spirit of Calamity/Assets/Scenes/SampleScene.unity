@@ -243,7 +243,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0015178323, y: 0.15527534}
+  m_Offset: {x: 0.034588456, y: 0.19270039}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -254,7 +254,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.4959833, y: 0.75408745}
+  m_Size: {x: 0.81015146, y: 1.0048656}
   m_EdgeRadius: 0
 --- !u!61 &47140686
 BoxCollider2D:
@@ -269,7 +269,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0024558604, y: -0.22123152}
+  m_Offset: {x: 0.035505414, y: -0.49848056}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -280,7 +280,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.3787722, y: 0.36533916}
+  m_Size: {x: 0.81208885, y: 0.3836999}
   m_EdgeRadius: 0
 --- !u!50 &47140687
 Rigidbody2D:
@@ -316,16 +316,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
-  dummyModeEnabler: 1
+  dummyModeEnabler: 0
   maxHealth:
     useConstant: 0
     constantValue: 0
     variable: {fileID: 11400000, guid: 3ff392b7548652e44820bff8a69bdda4, type: 2}
-  moveSpeed: 1
-  enemyName: Vault Skele 1
+  moveSpeed: 3
+  enemyName: Vault Skeleton 1
   debugModeEnabler: 0
   target: {fileID: 593449764}
-  chaseRadius: 3
+  chaseRadius: 5
   attackRadius: 0
   homePosition: {x: 0, y: 1}
   myRidgidBody: {fileID: 0}
@@ -337,7 +337,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 47140681}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e332d96088c51441a17999791a1168c, type: 3}
   m_Name: 
@@ -345,7 +345,7 @@ MonoBehaviour:
   hitboxName: Vault Skeleton Armor
   canBreakObjects: 0
   hasKnockback: 1
-  thrust: 1200
+  thrust: 1700
   knocktime: 0.2
   recoverDelay: 0
   damage: 1
@@ -11708,7 +11708,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0022463351, y: -0.013040125}
+  m_Offset: {x: -0.00034362078, y: -0.005429387}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -11719,7 +11719,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.43719295, y: 0.5913471}
+  m_Size: {x: 0.7530346, y: 0.99471116}
   m_EdgeRadius: 0
 --- !u!61 &593449769
 BoxCollider2D:
@@ -11734,7 +11734,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.00065618753, y: -0.2497916}
+  m_Offset: {x: -0.0025588274, y: -0.49713743}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -11745,7 +11745,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.43186045, y: 0.25542}
+  m_Size: {x: 0.87708306, y: 0.50657153}
   m_EdgeRadius: 0
 --- !u!1 &633139424
 GameObject:
@@ -12046,7 +12046,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1769507127}
   m_LocalRotation: {x: -0, y: -0, z: -0.7060917, w: 0.7081205}
-  m_LocalPosition: {x: -0.052, y: 0, z: 0}
+  m_LocalPosition: {x: -0.052, y: 0.305, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 534246364}
@@ -12067,7 +12067,7 @@ MonoBehaviour:
   hitboxName: Down Hitbox
   canBreakObjects: 1
   hasKnockback: 1
-  thrust: 1200
+  thrust: 1700
   knocktime: 0.2
   recoverDelay: 0
   damage: 1
@@ -12097,11 +12097,13 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.64049494, y: -0.07554808}
-      - {x: -0.72144514, y: -0.07165456}
-      - {x: -0.4755052, y: -0.5335275}
-      - {x: -0.023629157, y: -0.74329185}
-      - {x: 0.40249455, y: -0.55161905}
+    - - {x: 1.2577292, y: -0.83599055}
+      - {x: 1.3500111, y: -0.029216606}
+      - {x: -1.0745969, y: -0.055743355}
+      - {x: -0.992364, y: -0.7946347}
+      - {x: -0.7005024, y: -1.3843806}
+      - {x: 0.07226126, y: -1.7215638}
+      - {x: 0.7024549, y: -1.5350631}
 --- !u!1 &1800150919
 GameObject:
   m_ObjectHideFlags: 0
@@ -13223,7 +13225,7 @@ MonoBehaviour:
   hitboxName: Down Hitbox
   canBreakObjects: 1
   hasKnockback: 1
-  thrust: 1200
+  thrust: 1700
   knocktime: 0.2
   recoverDelay: 0
   damage: 1
@@ -13253,11 +13255,13 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.64049494, y: -0.07554808}
-      - {x: -0.72144514, y: -0.07165456}
-      - {x: -0.5295542, y: -0.5974394}
-      - {x: 0.009324193, y: -0.77378905}
-      - {x: 0.46708077, y: -0.5912545}
+    - - {x: 1.1799667, y: -0.5947318}
+      - {x: 1.2578316, y: 0.07044372}
+      - {x: -1.4180343, y: 0.06599474}
+      - {x: -1.3763543, y: -0.5565436}
+      - {x: -0.9396019, y: -1.2490057}
+      - {x: -0.08635014, y: -1.5267574}
+      - {x: 0.7090455, y: -1.3053885}
 --- !u!1 &1933880096
 GameObject:
   m_ObjectHideFlags: 0
@@ -13284,7 +13288,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1933880096}
   m_LocalRotation: {x: -0, y: -0, z: 0.9999991, w: -0.0013530591}
-  m_LocalPosition: {x: 0, y: -0.267, z: 0}
+  m_LocalPosition: {x: 0, y: -0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 534246364}
@@ -13305,7 +13309,7 @@ MonoBehaviour:
   hitboxName: Down Hitbox
   canBreakObjects: 1
   hasKnockback: 1
-  thrust: 1200
+  thrust: 1700
   knocktime: 0.2
   recoverDelay: 0
   damage: 1
@@ -13335,11 +13339,13 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.64049494, y: -0.07554808}
-      - {x: -0.72144514, y: -0.07165456}
-      - {x: -0.5107349, y: -0.57204777}
-      - {x: -0.030740947, y: -0.7713587}
-      - {x: 0.4585689, y: -0.5833775}
+    - - {x: 1.1799667, y: -0.5947318}
+      - {x: 1.2578316, y: 0.07044372}
+      - {x: -1.4180343, y: 0.06599474}
+      - {x: -1.3763543, y: -0.5565436}
+      - {x: -0.9396019, y: -1.2490057}
+      - {x: -0.08635014, y: -1.5267574}
+      - {x: 0.7090455, y: -1.3053885}
 --- !u!1 &2022717308
 GameObject:
   m_ObjectHideFlags: 0
@@ -13365,13 +13371,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2022717308}
-  m_LocalRotation: {x: -0, y: -0, z: 0.70675653, w: 0.70745695}
-  m_LocalPosition: {x: 0.064, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.70354915, w: -0.7106466}
+  m_LocalPosition: {x: -0.052, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 534246364}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 89.943}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -270.575}
 --- !u!114 &2022717310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13387,7 +13393,7 @@ MonoBehaviour:
   hitboxName: Down Hitbox
   canBreakObjects: 1
   hasKnockback: 1
-  thrust: 1200
+  thrust: 1700
   knocktime: 0.2
   recoverDelay: 0
   damage: 1
@@ -13417,8 +13423,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.64049494, y: -0.07554808}
-      - {x: -0.72144514, y: -0.07165456}
-      - {x: -0.4232534, y: -0.5439395}
-      - {x: -0.0274682, y: -0.7538273}
-      - {x: 0.4232361, y: -0.51321006}
+    - - {x: 1.2577292, y: -0.83599055}
+      - {x: 1.3500111, y: -0.029216606}
+      - {x: -1.0481732, y: -0.06560855}
+      - {x: -0.992364, y: -0.7946347}
+      - {x: -0.7005024, y: -1.3843806}
+      - {x: 0.07226126, y: -1.7215638}
+      - {x: 0.7024549, y: -1.5350631}
