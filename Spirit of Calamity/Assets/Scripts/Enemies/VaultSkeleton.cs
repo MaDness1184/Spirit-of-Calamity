@@ -29,7 +29,10 @@ public class VaultSkeleton : Enemy
     // Update is called once per frame
     void FixedUpdate()
     {
-        CheckDistance();
+        if (dummyModeEnabler) // Dummy Mode
+            ChangeState(EnemyState.dummy);
+        else
+            CheckDistance();
     }
 
     // Actions

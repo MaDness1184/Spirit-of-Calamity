@@ -8,14 +8,17 @@ public enum EnemyState
     walk,
     attack,
     stagger,
-    dead
+    dead,
+    dummy
 }
 
 public class Enemy : MonoBehaviour
 {
     [Header("Enemy State")]
     public EnemyState currentState;
+    public bool dummyModeEnabler = false;
     private bool invulnerable = false;
+
 
     [Header("Enemy Stats")]
     public FloatReference maxHealth;
