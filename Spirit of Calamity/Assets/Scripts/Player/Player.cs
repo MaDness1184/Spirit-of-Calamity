@@ -184,6 +184,10 @@ public class Player : MonoBehaviour
                 case 1:
                     Debug.Log("Player Velocity: " + changeInVelocity);
                     break;
+                case 2:
+                    Debug.Log("");
+                    break;
+
             }
         }
     }

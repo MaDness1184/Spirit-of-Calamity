@@ -140,9 +140,9 @@ GameObject:
   - component: {fileID: 47140688}
   - component: {fileID: 47140689}
   m_Layer: 0
-  m_Name: Vault Skeleton
+  m_Name: Vault Skeleton 1
   m_TagString: Enemy
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -345,11 +345,11 @@ MonoBehaviour:
   hitboxName: Vault Skeleton (Body)
   canBreakObjects: 0
   hasKnockback: 1
-  thrust: 1700
+  thrust: 3000
   knocktime: 0.2
-  recoverDelay: 0
+  recoverDelay: 0.15
   damage: 1
-  debugModeEnabler: 1
+  debugModeEnabler: 0
 --- !u!1 &126392669
 GameObject:
   m_ObjectHideFlags: 0
@@ -11690,7 +11690,7 @@ MonoBehaviour:
   runSpeed: 5.2
   basicAttackDamage: 1
   basicDelay: 0.35
-  debugModeEnabler: 0
+  debugModeEnabler: 1
 --- !u!50 &593449766
 Rigidbody2D:
   serializedVersion: 4
@@ -12107,7 +12107,7 @@ MonoBehaviour:
   knocktime: 0.2
   recoverDelay: 0
   damage: 1
-  debugModeEnabler: 1
+  debugModeEnabler: 0
 --- !u!60 &1769507130
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -13265,7 +13265,7 @@ MonoBehaviour:
   knocktime: 0.2
   recoverDelay: 0
   damage: 1
-  debugModeEnabler: 1
+  debugModeEnabler: 0
 --- !u!60 &1904536583
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -13349,7 +13349,7 @@ MonoBehaviour:
   knocktime: 0.2
   recoverDelay: 0
   damage: 1
-  debugModeEnabler: 1
+  debugModeEnabler: 0
 --- !u!60 &1933880099
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -13426,14 +13426,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e332d96088c51441a17999791a1168c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitboxName: Down Hitbox
+  hitboxName: Right Hitbox
   canBreakObjects: 1
   hasKnockback: 1
   thrust: 1700
   knocktime: 0.2
   recoverDelay: 0
   damage: 1
-  debugModeEnabler: 1
+  debugModeEnabler: 0
 --- !u!60 &2022717311
 PolygonCollider2D:
   m_ObjectHideFlags: 0
