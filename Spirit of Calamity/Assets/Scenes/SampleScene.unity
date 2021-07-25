@@ -243,7 +243,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.034588456, y: 0.19270039}
+  m_Offset: {x: 0.010368139, y: 0.0867362}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -254,7 +254,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.81015146, y: 1.0048656}
+  m_Size: {x: 0.93125325, y: 1.216794}
   m_EdgeRadius: 0
 --- !u!61 &47140686
 BoxCollider2D:
@@ -269,7 +269,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.035505414, y: -0.49848056}
+  m_Offset: {x: 0.0022023916, y: -0.44701242}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -280,7 +280,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.81208885, y: 0.3836999}
+  m_Size: {x: 0.7454828, y: 0.5471878}
   m_EdgeRadius: 0
 --- !u!50 &47140687
 Rigidbody2D:
@@ -4723,8 +4723,8 @@ GameObject:
   - component: {fileID: 260886044}
   - component: {fileID: 260886049}
   - component: {fileID: 260886048}
-  - component: {fileID: 260886047}
   - component: {fileID: 260886046}
+  - component: {fileID: 260886047}
   - component: {fileID: 260886045}
   m_Layer: 0
   m_Name: Collisions
@@ -11687,9 +11687,9 @@ MonoBehaviour:
     useConstant: 0
     constantValue: 0
     variable: {fileID: 11400000, guid: 9ddf54c73c7cf0b4f921921aaa6386df, type: 2}
-  runSpeed: 5
+  runSpeed: 5.2
   basicAttackDamage: 1
-  basicDelay: 0.4
+  basicDelay: 0.35
   debugModeEnabler: 0
 --- !u!50 &593449766
 Rigidbody2D:
@@ -12121,7 +12121,7 @@ PolygonCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.8, y: 0.3}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -12133,13 +12133,13 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.2577292, y: -0.83599055}
-      - {x: 1.3500111, y: -0.029216606}
-      - {x: -1.0745969, y: -0.055743355}
-      - {x: -0.992364, y: -0.7946347}
-      - {x: -0.7005024, y: -1.3843806}
-      - {x: 0.07226126, y: -1.7215638}
-      - {x: 0.7024549, y: -1.5350631}
+    - - {x: 1.4588776, y: -0.9827073}
+      - {x: 1.2216861, y: -0.15704304}
+      - {x: -1.3649946, y: -0.1486314}
+      - {x: -1.522259, y: -1.0437115}
+      - {x: -1.094637, y: -1.5750811}
+      - {x: 0.022510625, y: -1.9100645}
+      - {x: 1.164972, y: -1.5524096}
 --- !u!1 &1800150919
 GameObject:
   m_ObjectHideFlags: 0
@@ -13279,7 +13279,7 @@ PolygonCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.2}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -13291,13 +13291,13 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.1799667, y: -0.5947318}
-      - {x: 1.2578316, y: 0.07044372}
-      - {x: -1.4180343, y: 0.06599474}
-      - {x: -1.3763543, y: -0.5565436}
-      - {x: -0.9396019, y: -1.2490057}
-      - {x: -0.08635014, y: -1.5267574}
-      - {x: 0.7090455, y: -1.3053885}
+    - - {x: 1.4588776, y: -0.9827073}
+      - {x: 1.2216861, y: -0.15704304}
+      - {x: -1.3649946, y: -0.1486314}
+      - {x: -1.522259, y: -1.0437115}
+      - {x: -1.094637, y: -1.5750811}
+      - {x: 0.022510625, y: -1.9100645}
+      - {x: 1.164972, y: -1.5524096}
 --- !u!1 &1933880096
 GameObject:
   m_ObjectHideFlags: 0
@@ -13363,7 +13363,7 @@ PolygonCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.5}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -13375,13 +13375,13 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.1799667, y: -0.5947318}
-      - {x: 1.2578316, y: 0.07044372}
-      - {x: -1.4180343, y: 0.06599474}
-      - {x: -1.3763543, y: -0.5565436}
-      - {x: -0.9396019, y: -1.2490057}
-      - {x: -0.08635014, y: -1.5267574}
-      - {x: 0.7090455, y: -1.3053885}
+    - - {x: 1.4588776, y: -0.9827073}
+      - {x: 1.2216861, y: -0.15704304}
+      - {x: -1.3649946, y: -0.1486314}
+      - {x: -1.522259, y: -1.0437115}
+      - {x: -1.094637, y: -1.5750811}
+      - {x: 0.022510625, y: -1.9100645}
+      - {x: 1.164972, y: -1.5524096}
 --- !u!1 &2022717308
 GameObject:
   m_ObjectHideFlags: 0
@@ -13447,7 +13447,7 @@ PolygonCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.4, y: 0.15}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -13459,10 +13459,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.2577292, y: -0.83599055}
-      - {x: 1.3500111, y: -0.029216606}
-      - {x: -1.0481732, y: -0.06560855}
-      - {x: -0.992364, y: -0.7946347}
-      - {x: -0.7005024, y: -1.3843806}
-      - {x: 0.07226126, y: -1.7215638}
-      - {x: 0.7024549, y: -1.5350631}
+    - - {x: 1.4588776, y: -0.9827073}
+      - {x: 1.2216861, y: -0.15704304}
+      - {x: -1.3649946, y: -0.1486314}
+      - {x: -1.522259, y: -1.0437115}
+      - {x: -1.094637, y: -1.5750811}
+      - {x: 0.022510625, y: -1.9100645}
+      - {x: 1.164972, y: -1.5524096}
