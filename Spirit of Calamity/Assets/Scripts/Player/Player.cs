@@ -174,6 +174,7 @@ public class Player : MonoBehaviour
         }
     }
 
+    // Debug Mode
     private void DebugMode(int debugCode)
     {
         if (debugModeEnabler)

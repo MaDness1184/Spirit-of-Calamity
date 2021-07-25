@@ -118,4 +118,18 @@ public class VaultSkeleton : Enemy
 
     // Coroutines
 
+
+    // Debug Mode
+    private void DebugModeVaultSkeleton(int debugCode)
+    {
+        if (debugModeEnabler)
+        {
+            switch (debugCode)
+            {
+                case 1:
+                    Debug.Log(enemyName + " has died.");
+                    break;
+            }
+        }
+    }
 }

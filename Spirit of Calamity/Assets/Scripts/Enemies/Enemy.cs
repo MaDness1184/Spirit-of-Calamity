@@ -78,7 +78,7 @@ public class Enemy : MonoBehaviour
     {
         ChangeState(EnemyState.dead);
         this.gameObject.SetActive(false); // will be put into a coroutine later
-        DebugMode(1);
+        DebugModeEnemy(1);
     }
 
     // Coroutines
@@ -97,7 +97,8 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private void DebugMode(int debugCode)
+    //Debug Mode
+    private void DebugModeEnemy(int debugCode)
     {
         if (debugModeEnabler)
         {
